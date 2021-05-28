@@ -1,0 +1,273 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+nav{
+  position: sticky;
+  top: 0;
+  background-color: #F2BC94;
+  border-bottom:3px solid #722620;
+  min-height: 10vh;
+  width:100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Courgette', cursive;
+
+}
+nav ul{
+ min-width:70vw;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+nav a{
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  color: #30110D;
+  font-family: monospace;
+  font-size: 1rem;
+}
+nav a:hover{
+  border:2px solid #30110D;
+}
+.dogclass{    /*common div for dog image n text*/
+
+  min-height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.dog-text{
+  height:45vh;
+  flex:1 1 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dog-img{
+
+  height:45vh;
+  flex:1 1 30rem;
+  background-image: url("dog-gp.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.dog-text h1{
+  font-family: 'Pattaya', sans-serif;
+}
+.dog-text p{
+  font-family: 'Yellowtail', cursive;
+  font-size: 25px;
+
+}
+
+.grid-p{    /*note:display grid is applied to parent ,so we can use sisplay flex in child as its soleyfor child*/
+
+  min-height:90vh;
+  width:70vw;
+  margin: auto;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-areas:"box1 box1 box2"
+                      "box1 box1 box3"
+                      "box4 box5 box6";
+
+}
+.grid-p a{   /*since we want to apply hover over anchor tag of only the grid boxes we use grid-p a*/
+  min-height: 30vh;
+  text-decoration: none;
+  background-color: red;/*because if we use it in box, the box will block the image displayed in its child*/
+}
+
+.box{
+
+  height: 100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color:rgba(252, 252, 252, 0);   /* its used for making our text transparent on the image*/
+}
+.grid-p a:nth-child(1) {
+  grid-area:box1;
+  background-image: url("Alaskan-Malamute.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top;
+}
+.grid-p a:nth-child(2) {
+  grid-area:box2;
+  background-image: url("American-bully1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top;
+}
+
+.grid-p a:nth-child(3) {
+  grid-area:box3;
+  background-image: url("Caucasian-Shepherd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top;
+
+}
+
+.grid-p a:nth-child(4) {
+  grid-area:box4;
+  background-image: url("Great-Dane1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top;
+}
+
+.grid-p a:nth-child(5) {
+  grid-area:box5;
+  background-image: url("Samoyed.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top;
+}
+
+.grid-p a:nth-child(6) {
+  grid-area:box6;
+  background-image: url("tibetan-mastiff.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top;
+}
+
+.box:hover{
+  background: #F2BC94;
+ color: rgba(48,17,13,1); /*its used for displaying the text after we hover over it beacuse we had made the text transparent in the image*/
+ font-size: 40px;
+
+}
+
+.Contentclass{
+  margin: auto;
+  margin-bottom: 5rem;
+  min-height: 50vh;
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.text{
+  height:45vh;
+  padding:2rem;
+  flex:2 1 40rem;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+}
+.text-img{
+
+  height:45vh;
+  flex:1 1 20rem;
+  background-color: red;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border-radius: 20px;
+
+}
+.text h1{
+  padding-bottom: 10px;
+  color: #30110D;
+  background-color: #F2BC94;
+}
+.text p{
+  font-family: 'Cookie', cursive;
+  font-size: 25px;
+}
+#Alaskan-Malamute .text-img{
+  background-image: url("Alaskan-Malamute.jpg");
+}
+#American-Bully .text-img{
+  background-image: url("American-bully1.jpg");
+}
+#Caucasian-Shepherd .text-img{
+  background-image: url("Caucasian-Shepherd.jpg");
+}
+#Great-Dane .text-img{
+  background-image: url("Great-Dane1.jpg");
+}
+#Samoyed .text-img{
+  background-image: url("Samoyed.jpg");
+}
+#Tibetan-Mastiff .text-img{
+  background-image: url("tibetan-mastiff.jpg");
+}
+
+#card{
+  margin: auto;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  text-align: justify;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 60vw;
+  background-color: #F2BC94;
+  border-radius: 5px;
+  list-style:armenian;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+footer{
+  height: 15vh;
+  width:100vw;
+  background:#F2BC94;
+  color: #30110D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Limelight', cursive;
+  font-size: 30px;
+}
+
+
+@media screen and (max-width:786px) { /*we use media query mainly for altering mobie view.*/
+  html{
+    font-size: 60%;
+  }
+  nav {
+    flex-direction: column;
+    min-height: 15vh;
+  }
+  .dogclass{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dog-text{
+   flex:1 1 20rem;
+}
+.grid-p{
+  width:90vw;
+  grid-template-areas:"box1 box1"
+                      "box2 box3"
+                      "box4 box5"
+                      "box6 box6";
+
+}
+.Contentclass{
+  width:80vw;
+}
+#card{
+  width:80vw;
+}
+}
