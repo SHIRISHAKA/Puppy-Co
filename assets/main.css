@@ -266,6 +266,15 @@ footer{
 }
 .Contentclass{
   width:80vw;
+  min-height:90vh;
+}
+.text-img{
+  margin-top:10rem;
+  margin-bottom:10rem;
+}
+.text{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 #card{
   width:80vw;
